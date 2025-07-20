@@ -2,24 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aether PORTFOLIO|RIMJHIM |</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aether UI</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body onload="initTheme()">
-  <!-- Loader -->
+  <!-- Preloader -->
   <div id="loader" class="loader-overlay">
     <div class="spinner"></div>
   </div>
 
-  <!-- Particle Background -->
-  <div id="tsparticles"></div>
-
-  <!-- Header -->
   <header>
     <nav class="navbar">
       <h1 class="logo">Aether UI</h1>
@@ -27,128 +20,115 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <select class="color-picker" onchange="setThemeColor(this.value)">
-  <option value="#6C5CE7">Indigo Violet (Default)</option>
-  <option value="#00B894">Dark Teal</option>
-  <option value="#F39C12">Oxford Blue + Amber</option>
-  <option value="#00ADB5">Charcoal + Cyan</option>
-  <option value="#1DB954">Royal Navy + Emerald</option>
-  <option value="#7F00FF">Gunmetal + Cyber Purple</option>
-  <option value="#6C63FF">Electric Indigo + Graphite</option>
-  <option value="#FF5733">British Green + Orange</option>
+  <option value="#6C5CE7">Indigo Violet</option>      <!-- Muted purple -->
+  <option value="#00B894">Dark Teal</option>          <!-- Elegant dark teal -->
+  <option value="#F39C12">Muted Amber</option>        <!-- Deeper amber -->
+  <option value="#0984E3">Electric Blue</option>      <!-- Cool dark blue -->
+  <option value="#D63031">Crimson Red</option>        <!-- Dark red -->
 </select>
 
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero reveal">
-  <h2>Hello, I'm RIMJHIM</h2>
+ <section class="hero reveal">
+  <h2>Hello, I'm Dalveer</h2>
   <p><span id="typed-text"></span><span class="cursor">|</span></p>
 </section>
 
-
-  <!-- About -->
-  <section id="about" class="about-section reveal">
-    <div class="about-container">
-      <div class="about-image">
-        <img src="my.jpg" alt="Profile Image">
-      </div>
-      <div class="about-content">
-        <h2>About Me</h2>
-        <p><span id="about-typed-text"></span><span class="cursor">|</span></p>
-        <div class="skills-list">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
-          <span>OpenCV</span><span>React</span><span>Bootstrap</span><span>VBA</span>
-        </div>
+<section id="about" class="about-section reveal">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="your-image.jpg" alt="Profile Image" />
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>
+        I'm a frontend-focused developer experienced in building dynamic UIs, form validation tools, Excel automation with VBA, chatbot microservices, and web-based calculators. I work with HTML, CSS, JavaScript, Python, and React to create efficient, scalable, and visually polished interfaces.
+      </p>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>VBA</span>
+        <span>React</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects" class="projects reveal">
-    <h2>Projects</h2>
-    <div class="filter-buttons">
-      <button onclick="filterProjects('all')">All</button>
-      <button onclick="filterProjects('Frontend')">Frontend</button>
-      <button onclick="filterProjects('ML')">ML</button>
-      <button onclick="filterProjects('Microservice')">Microservice</button>
-      <button onclick="filterProjects('Excel')">Excel</button>
+
+
+
+<section id="projects" class="projects reveal">
+  <h2>Projects</h2>
+
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('Frontend')">Frontend</button>
+    <button onclick="filterProjects('ML')">ML</button>
+    <button onclick="filterProjects('Microservice')">Microservice</button>
+    <button onclick="filterProjects('Excel')">Excel</button>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card" data-tags="ML">
+      <h3>Sign Language Translator</h3>
+      <p>Converts sign language to text using OpenCV and ML.</p>
+      <a href="https://signdetection.netlify.app/" target="_blank">View Project</a>
     </div>
-    <div class="project-grid">
-  <!-- ML -->
-  <div class="project-card" data-tags="ML">
-    <h3>Sign Language Translator</h3>
-    <p>Converts sign language to text using OpenCV and ML.</p>
-    <a href="https://signdetection.netlify.app/" target="_blank">View</a>
+
+    <div class="project-card" data-tags="Frontend">
+      <h3>My Portfolio</h3>
+      <p>Fully responsive developer portfolio website.</p>
+      <a href="#" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card" data-tags="Frontend">
+      <h3>Restaurant Reservation Landing Page</h3>
+      <p>Interactive 3D web platform to reserve tables via form and chatbot assistance.</p>
+      <a href="https://github.com/Rimjhimjhaa/second-repository-" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card" data-tags="Frontend">
+      <h3>Caffeccino</h3>
+      <p>Responsive coffee shop website with UI for browsing products and placing orders.</p>
+      <a href="https://github.com/Rimjhimjhaa/third-repository-" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card" data-tags="Frontend">
+      <h3>Single Page Form</h3>
+      <p>Responsive and user-friendly form built for data collection and validation.</p>
+      <a href="https://github.com/Rimjhimjhaa/FORM" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card" data-tags="Microservice">
+      <h3>RestRobot</h3>
+      <p>Microservice-based chatbot to assist users in real-time restaurant reservations.</p>
+      <a href="https://github.com/Rimjhimjhaa/second-repository-" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card" data-tags="Excel">
+      <h3>Loan EMI Calculator (Excel)</h3>
+      <p>Excel-based tool for automated loan amortization and financial calculations.</p>
+      <a href="https://github.com/Rimjhimjhaa/LOAN-EMI-CALCULATOR-" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card" data-tags="Excel">
+      <h3>Excel Highlighter</h3>
+      <p>VBA script to dynamically highlight active rows and columns in Excel.</p>
+      <a href="https://github.com/Rimjhimjhaa/HIGHLIGHTER" target="_blank">View Project</a>
+    </div>
   </div>
-
-  <!-- Frontend -->
-  <div class="project-card" data-tags="Frontend">
-    <h3>My Portfolio</h3>
-    <p>Fully responsive developer portfolio website.</p>
-    <a href="#" target="_blank">View</a>
-  </div>
-
-  <div class="project-card" data-tags="Frontend">
-    <h3>Restaurant Reservation</h3>
-    <p>Interactive 3D landing page with chatbot support.</p>
-    <a href="https://rimjhimjhaa.github.io/restrobot/" target="_blank">View</a>
-  </div>
-
-  <div class="project-card" data-tags="Frontend">
-    <h3>Caffeccino</h3>
-    <p>Modern UI for coffee shop orders and browsing.</p>
-    <a href="https://github.com/Rimjhimjhaa/third-repository-" target="_blank">View</a>
-  </div>
-
-  <div class="project-card" data-tags="Frontend">
-    <h3>Form UI</h3>
-    <p>Single page data collection and validation form.</p>
-    <a href="https://github.com/Rimjhimjhaa/FORM" target="_blank">View</a>
-  </div>
-
-  <!-- Microservice -->
-  <div class="project-card" data-tags="Microservice">
-    <h3>RestRobot</h3>
-    <p>Microservice chatbot to assist with restaurant reservations.</p>
-    <a href="https://github.com/Rimjhimjhaa/second-repository-" target="_blank">View</a>
-  </div>
-
-  <!-- Excel -->
-  <div class="project-card" data-tags="Excel">
-    <h3>Loan EMI Calculator</h3>
-    <p>Excel tool for calculating EMIs and payment schedules.</p>
-    <a href="https://github.com/Rimjhimjhaa/LOAN-EMI-CALCULATOR-" target="_blank">View</a>
-  </div>
-
-  <div class="project-card" data-tags="Excel">
-    <h3>Excel Highlighter</h3>
-    <p>VBA-based script to highlight active rows and columns in Excel.</p>
-    <a href="https://github.com/Rimjhimjhaa/HIGHLIGHTER" target="_blank">View</a>
-  </div>
-   <div class="project-card" data-tags="ML NLP">
-    <h3>RAG Chatbot</h3>
-    <p>Context-aware chatbot using LLM + LangChain + FAISS.</p>
-    <a href="https://ad394025792b.ngrok-free.app/" target="_blank">View</a>
-  </div>
-</div>
+</section>
 
 
-  <!-- Resume -->
-  <section id="resume" class="resume reveal">
-    
-    
-    <a href="RESUME.pdf" class="resume-button" download>📄 Download Resume</a>
-  </section>
-
-  <!-- Contact -->
   <section id="contact" class="contact reveal">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mblkdyen" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -156,12 +136,12 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Aether UI. All rights reserved.</p>
   </footer>
 
   <div id="toast" class="toast hidden"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
